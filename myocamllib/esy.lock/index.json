@@ -1,0 +1,73 @@
+{
+  "checksum": "38ec9d2a8278ed9b42ba137a892590ee",
+  "root": "myocamllib@link-dev:./esy.json",
+  "node": {
+    "ocaml@4.13.1000@d41d8cd9": {
+      "id": "ocaml@4.13.1000@d41d8cd9",
+      "name": "ocaml",
+      "version": "4.13.1000",
+      "source": {
+        "type": "install",
+        "source": [
+          "archive:https://registry.npmjs.org/ocaml/-/ocaml-4.13.1000.tgz#sha1:0a90128c74d5a3dd6d30e82a759694eb0a05859f"
+        ]
+      },
+      "overrides": [],
+      "dependencies": [],
+      "devDependencies": []
+    },
+    "myrustlib@link:../myrustlib/package.json": {
+      "id": "myrustlib@link:../myrustlib/package.json",
+      "name": "myrustlib",
+      "version": "link:../myrustlib/package.json",
+      "source": {
+        "type": "link",
+        "path": "../myrustlib",
+        "manifest": "package.json"
+      },
+      "overrides": [],
+      "dependencies": [ "esy-rustup@1.51.1@d41d8cd9" ],
+      "devDependencies": []
+    },
+    "myocamllib@link-dev:./esy.json": {
+      "id": "myocamllib@link-dev:./esy.json",
+      "name": "myocamllib",
+      "version": "link-dev:./esy.json",
+      "source": { "type": "link-dev", "path": ".", "manifest": "esy.json" },
+      "overrides": [],
+      "dependencies": [
+        "ocaml@4.13.1000@d41d8cd9",
+        "myrustlib@link:../myrustlib/package.json",
+        "myclib@link:../myclib/esy.json"
+      ],
+      "devDependencies": []
+    },
+    "myclib@link:../myclib/esy.json": {
+      "id": "myclib@link:../myclib/esy.json",
+      "name": "myclib",
+      "version": "link:../myclib/esy.json",
+      "source": {
+        "type": "link",
+        "path": "../myclib",
+        "manifest": "esy.json"
+      },
+      "overrides": [],
+      "dependencies": [ "myrustlib@link:../myrustlib/package.json" ],
+      "devDependencies": []
+    },
+    "esy-rustup@1.51.1@d41d8cd9": {
+      "id": "esy-rustup@1.51.1@d41d8cd9",
+      "name": "esy-rustup",
+      "version": "1.51.1",
+      "source": {
+        "type": "install",
+        "source": [
+          "archive:https://registry.npmjs.org/esy-rustup/-/esy-rustup-1.51.1.tgz#sha1:2b07e522c917640770e50c2b545bf3ac1974b27e"
+        ]
+      },
+      "overrides": [],
+      "dependencies": [],
+      "devDependencies": []
+    }
+  }
+}

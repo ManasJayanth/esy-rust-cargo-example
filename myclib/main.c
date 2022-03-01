@@ -1,6 +1,7 @@
 #include "foobar.h"
+#include "myclib.h"
 
 int main() {
-  run(40);
+  exportedFunction(40);
   return 0;
 }

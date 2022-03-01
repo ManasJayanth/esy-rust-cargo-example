@@ -1,0 +1,16 @@
+{
+  "esy": {
+    "buildsInSource": true,
+    "build": "ocamlopt -ccopt -I#{myclib.install / 'include'} -ccopt -I#{myrustlib.install / 'include'} -cclib -L#{myrustlib.lib} -cclib -L#{myclib.lib} -cclib -lmyclib -cclib -lfoobar stubs.c main.ml -o main",
+    "install": "cp #{self.target_dir}/main #{self.bin}"
+  },
+  "dependencies": {
+    "ocaml": "4.13.x",
+    "myrustlib": "*",
+    "myclib": "*"
+  },
+  "resolutions": {
+    "myrustlib": "link:../myrustlib/package.json",
+    "myclib": "link:../myclib/esy.json"
+  }
+}

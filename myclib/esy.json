@@ -2,14 +2,21 @@
   "esy": {
     "buildsInSource": true,
     "build": [
-      "cc -I#{mylib.install / 'include'} -L#{mylib.lib} -lfoobar main.c"
+      "cc -I#{myrustlib.install / 'include'} -L#{myrustlib.lib} -lfoobar -c lib.c -o myclib.o",
+      "cc -I#{myrustlib.install / 'include'} -L#{myrustlib.lib} -lfoobar myclib.o main.c",
+      "ar rcs libmyclib.a myclib.o"
     ],
-    "install": "cp a.out #{self.bin}/myclib"
+    "install": [
+      "cp #{self.target_dir}/a.out #{self.bin}/myclib",
+      "mkdir -p #{self.install / 'include'}",
+      "cp #{self.target_dir}/myclib.h #{self.install / 'include'}",
+      "cp #{self.target_dir}/libmyclib.a #{self.lib}"
+    ]
   },
   "dependencies": {
-    "mylib": "*"
+    "myrustlib": "*"
   },
   "resolutions": {
-    "mylib": "link:../mylib/package.json"
+    "myrustlib": "link:../myrustlib/package.json"
   }
 }

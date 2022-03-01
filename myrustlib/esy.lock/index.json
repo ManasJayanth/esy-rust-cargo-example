@@ -1,10 +1,10 @@
 {
   "checksum": "33e5601664eabc6e4f956e42ed0ecf10",
-  "root": "mylib@link-dev:./package.json",
+  "root": "myrustlib@link-dev:./package.json",
   "node": {
-    "mylib@link-dev:./package.json": {
-      "id": "mylib@link-dev:./package.json",
-      "name": "mylib",
+    "myrustlib@link-dev:./package.json": {
+      "id": "myrustlib@link-dev:./package.json",
+      "name": "myrustlib",
       "version": "link-dev:./package.json",
       "source": {
         "type": "link-dev",
