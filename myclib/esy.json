@@ -1,0 +1,15 @@
+{
+  "esy": {
+    "buildsInSource": true,
+    "build": [
+      "cc -I#{mylib.install / 'include'} -L#{mylib.lib} -lfoobar main.c"
+    ],
+    "install": "cp a.out #{self.bin}/myclib"
+  },
+  "dependencies": {
+    "mylib": "*"
+  },
+  "resolutions": {
+    "mylib": "link:../mylib/package.json"
+  }
+}

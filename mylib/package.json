@@ -1,0 +1,17 @@
+{
+  "esy": {
+    "buildsInSource": true,
+    "build": "cargo build --release",
+    "buildEnv": {
+      "CARGO_HOME": ".cargo"
+    },
+    "install": [
+      "cp #{self.target_dir}/target/release/libfoobar.a #{self.lib}",
+      "bash -c 'mkdir -p #{self.install / 'include'}'",
+      "cp #{self.target_dir}/headers/foobar.h #{self.install / 'include'}"
+    ]
+  },
+  "dependencies": {
+    "esy-rustup": "*"
+  }
+}

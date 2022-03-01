@@ -1,0 +1,33 @@
+{
+  "checksum": "33e5601664eabc6e4f956e42ed0ecf10",
+  "root": "mylib@link-dev:./package.json",
+  "node": {
+    "mylib@link-dev:./package.json": {
+      "id": "mylib@link-dev:./package.json",
+      "name": "mylib",
+      "version": "link-dev:./package.json",
+      "source": {
+        "type": "link-dev",
+        "path": ".",
+        "manifest": "package.json"
+      },
+      "overrides": [],
+      "dependencies": [ "esy-rustup@1.51.1@d41d8cd9" ],
+      "devDependencies": []
+    },
+    "esy-rustup@1.51.1@d41d8cd9": {
+      "id": "esy-rustup@1.51.1@d41d8cd9",
+      "name": "esy-rustup",
+      "version": "1.51.1",
+      "source": {
+        "type": "install",
+        "source": [
+          "archive:https://registry.npmjs.org/esy-rustup/-/esy-rustup-1.51.1.tgz#sha1:2b07e522c917640770e50c2b545bf3ac1974b27e"
+        ]
+      },
+      "overrides": [],
+      "dependencies": [],
+      "devDependencies": []
+    }
+  }
+}

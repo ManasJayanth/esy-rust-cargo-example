@@ -1,0 +1,19 @@
+[package]
+name = "foobar"
+description = "fooo"
+version = "0.1.0"
+authors = [
+    "Foo Bar <foo@bar.com>",
+]
+homepage = "https://github.com/foo/bar"
+repository = "https://github.com/foo/bar"
+readme = "README.md"
+license = "MIT OR Apache-2.0"
+edition = "2018"
+
+[lib]
+path = "src/lib.rs"
+crate-type = ["staticlib"]
+
+[dependencies]
+leftpad = "*"
